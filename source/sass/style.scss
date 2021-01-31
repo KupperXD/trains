@@ -1,3 +1,8 @@
-h1 {
-    font-weight: 600;
-}
+//var
+@import "reset";
+@import "./_bem/variables";
+@import "base.scss";
+@import "./_bem/first-page";
+@import "./_bem/navigation";
+@import "./_bem/rect-pic";
+@import "./_bem/menu";

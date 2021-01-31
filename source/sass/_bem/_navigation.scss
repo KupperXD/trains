@@ -1,0 +1,81 @@
+.navigation {
+    position: fixed;
+    left: 50%;
+    bottom: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+
+    @media (orientation: landscape), (max-width: 767px) {
+        bottom: 64px;
+    }
+
+    &__item {
+        margin: 0 60px;
+
+        @media (max-width: 920px) {
+            margin: 0 48px;
+        }
+
+        @media (orientation: landscape), (max-width: 767px) {
+            margin: 0 24px;
+        }
+
+        &.finger {
+            button {
+                border: 3px solid #433e3a;
+                background-color: rgba(166, 159, 147, 0.4);
+            }
+        }
+
+        svg {
+            width: 82px;
+            height: 82px;
+            transform: translateY(5px);
+
+            @media (max-width: 920px) {
+                width: 62px;
+                height: 62px;
+            }
+
+            @media (orientation: landscape),  (max-width: 767px) {
+                width: 32px;
+                height: 32px;
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            height: 130px;
+            border-radius: 100%;
+            padding: 0;
+            margin: 0;
+            border: none;
+            overflow: hidden;
+            border: 3px solid rgba(166, 159, 147, 0.4);
+            background-color: #433e3a;
+
+            @media (max-width: 920px) {
+                width: 112px;
+                height: 112px;
+            }
+
+            @media (orientation: landscape), (max-width: 767px) {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        img {
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
