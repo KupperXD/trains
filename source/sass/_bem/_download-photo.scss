@@ -1,0 +1,124 @@
+.download-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &__wrapper {
+        width: 100%;
+    }
+
+    &__item {
+        max-width: 100vh;
+        position: relative;
+        margin: 0 auto;
+        padding: 12px;
+        border-radius: 24px;
+        background-color: rgba(244, 234, 219, 0.6);
+        box-shadow: 0 0 21px rgba(0, 0, 0, 0.75);
+
+        @media (max-width: 767px) {
+            padding: 8px;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            display: block;
+            padding-top: calc(100% / 16 * 9);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 24px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        bottom: 16px;
+        right: 16px;
+        border-radius: 100%;
+
+        @media (max-width: 767px) {
+            width: 32px;
+            height: 32px;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background: url('../img/download.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: none;
+        }
+    }
+
+    &__bubble {
+        max-width: none;
+        position: absolute;
+        top: calc(100%);
+        right: 50%;
+
+        @media (max-width: 767px) {
+            width: 80px;
+            object-position: top;
+            object-fit: contain;
+        }
+    }
+
+    @media (orientation: landscape) {
+        &__item {
+            max-width: 70vh;
+
+            @media (max-height: 320px) {
+                max-width: 55vh;
+            }
+
+            @media (max-height: 1024px) {
+                max-width: 140vh;
+            }
+        } 
+
+        &__button {
+            @media (max-width: 920px) {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        &__bubble {
+            @media (max-width: 920px) {
+                width: 80px;
+                height: 25px;
+                object-position: top;
+                object-fit: contain;
+            }
+        }
+    }
+
+    @media (orientation: portrait) {
+        &__item {
+            max-width: 100vh;
+        }
+    }
+}
