@@ -1,0 +1,77 @@
+.map {
+    margin: 0 calc(100vw / 10 * 0.8 * (-1));
+    height: 100%;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .title {
+        flex-shrink: 0;
+    }
+
+    &__price {
+        padding: 0 48px;
+        list-style: none;
+        counter-reset: list;
+
+        @media (max-width: 767px) {
+            padding: 0 24px;
+        }
+
+        &-item {
+            text-align: center;
+            font-size: 16px;
+            line-height: 24px;
+
+            &::before {
+                counter-increment: list;
+                content: counter(list)".";
+            }
+        }
+    }
+
+
+    &__container {
+        width: 100%;
+        flex-grow: 1;
+        margin: 24px 0 0;
+        overflow: auto;
+        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        mask-repeat: no-repeat;
+    }
+
+    &__picture {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            object-fit: contain;
+        }
+    }
+
+    @media (orientation: landscape) {
+        margin: 0 calc(100vw / 10 * 0.4 * (-1));
+
+        &__container {
+            mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+        }
+
+        &__picture {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }  
+    }
+
+    @media (orientation: portrait) {
+
+    }
+}

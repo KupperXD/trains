@@ -1,0 +1,113 @@
+.menu-restaraunt-container {
+    height: 100%;
+    -webkit-mask-image: linear-gradient(
+        180deg
+        ,black 0%, black 80%, transparent 100%);
+        mask-repeat: no-repeat;
+        overflow: hidden;
+        overflow-y: auto;
+}
+
+.menu-restaraunt {
+
+    &__content {
+        margin: 24px 0 0;
+    }
+
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: -12px -24px;
+    }
+
+    &__item {
+        width: calc((100% - 96px) / 2);
+        margin: 12px 24px;
+        max-width: 420px;
+
+        &-title {
+            font-size: 32px;
+            line-height: 1;
+            text-align: center;
+
+            @media (max-width: 920px) {
+                font-size: 24px;
+            }
+
+            @media (max-width: 767px) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__picture {
+        padding: 12px;
+        border: 2px solid #94887a;
+        background-color: rgba(244, 234, 219, 0.3);
+        overflow: hidden;
+        border-radius: 16px;
+
+        @media (max-width: 767px) {
+            padding: 8px;
+        }
+
+        &-inner {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                padding-top: 110%;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-position: center;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+    &__price {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+
+        @media (max-width: 920px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    @media (orientation: landscape) {
+        &__item {
+            max-width: 42vh;
+        }
+
+        @media (max-height: 480px) {
+            &__item {
+                max-width: 35vh;
+            }
+        }
+    }
+
+    @media (orientation: portrait) {
+        
+    }
+}

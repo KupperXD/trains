@@ -1,14 +1,17 @@
 .navigation {
-    position: fixed;
-    left: 50%;
-    bottom: 112px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-50%);
 
-    @media (orientation: landscape), (max-width: 767px) {
-        bottom: 64px;
+    &-inner {
+        position: fixed;
+        left: 50%;
+        bottom: 112px;
+        transform: translateX(-50%);
+
+        @media (orientation: landscape), (max-width: 767px) {
+            bottom: 64px;
+        }
     }
 
     &__item {
@@ -76,6 +79,38 @@
             height: auto;
             object-fit: contain;
             object-position: center;
+        }
+    }
+
+    &__popup {
+        width: calc(100vw - (103px * 2));
+        position: absolute;
+        right: 0;
+        bottom: calc(100% + 50px);
+
+        @media (max-width: 767px) {
+            width: calc(100vw - (32px * 2));
+            max-width: calc(100vw - ((100vw - 288px) / 2) - 24px);
+        }
+
+        @media (min-width: 1200px) {
+            width: 700px;
+            right: 0;
+        }
+
+        @media (orientation: landscape) {
+            width: 70vw;
+            right: -48px;
+
+            @media (max-width: 767px) {
+                right: 0;
+            }
+            
+
+            @media (min-width: 1100px) {
+                width: 700px;
+                right: -64px;
+            }
         }
     }
 }

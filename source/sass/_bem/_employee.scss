@@ -1,0 +1,101 @@
+.employee {
+
+    &__content {
+        margin: 24px 0 0;
+    }
+
+    &__title-h2 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+    }
+
+    &__grid {
+        margin: 24px 0 0;
+    }
+
+    &__picture {
+        width: 50%;
+        margin: 0 auto ;
+        padding: 12px;
+        border: 2px solid #94887a;
+        background-color: rgba(244, 234, 219, 0.3);
+        overflow: hidden;
+        border-radius: 16px;
+
+        
+        @media (max-width: 767px) {
+            padding: 8px;
+        }
+
+        &-inner {
+            width: 100%;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+                max-height: 50vh;
+                object-fit: contain;
+                object-position: center bottom;
+            }
+        }
+    }
+
+    &__text {
+        text-align: left;
+        font-size: 22px;
+        line-height: 24px;
+        text-indent: 40px;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+
+        &:not(:first-of-type) {
+            margin: 16px 0 0;
+        }
+
+        &-inner {
+            margin: 24px 0 0;
+        }
+    }
+
+    @media (orientation: landscape) {
+
+        &__grid {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        &__picture {
+            width: 30%;
+            flex-shrink: 0;
+            margin: 0;
+
+            &-inner {
+                img {
+                    max-height: 40vh;
+                }
+            }
+        }
+
+        &__text {
+            &-inner {
+                margin: 0 0 0 24px;
+            }
+        }
+
+
+    }
+
+    @media (orientation: portrait) {
+        
+    }
+
+}
