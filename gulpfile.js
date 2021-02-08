@@ -36,6 +36,11 @@ gulp.task("images", function () {
         .pipe(gulp.dest("dist/img"));
 });
 
+gulp.task("fonts", function () {
+    return gulp.src("source/fonts/*.*")
+        .pipe(gulp.dest('dist/fonts'));
+});
+
 gulp.task("svgCopy", function () {
     return gulp.src("source/img/svg/*.svg")
         .pipe(imagemin([
@@ -84,7 +89,8 @@ gulp.task("build", gulp.series(
     "svgCopy",
     "js",
     "images",
-    "html"
+    "html",
+    "fonts",
 ));
 
 gulp.task("start", gulp.series("build", "server"));

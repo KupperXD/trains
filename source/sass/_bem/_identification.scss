@@ -1,0 +1,107 @@
+.identification {
+    height: 100%;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .title {
+        flex-shrink: 0;
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-grow: 1;
+        padding-top: 24px;
+
+        &-item {
+            width: 100%;
+
+            &:not(:first-of-type) {
+                margin: 48px 0 0;
+
+                @media (max-width: 767px) {
+                    margin: 24px 0 0;
+                }
+            }
+
+            &--info {
+                margin: 24px 0 0;
+                font-size: 28px;
+                line-height: 1.2;
+                text-align: center;
+
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    &__form {
+        &-label {
+            display: block;
+            font-size: 28px;
+            line-height: 1.2;
+            text-align: center;
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
+        }
+
+        &-inner {
+            margin: 8px 0 0;
+            border: 4px solid #837e73;
+            border-radius: 16px;
+            background: rgba(178, 167, 153, 0.7);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 48px;
+            font-size: 70px;
+            line-height: 1.2;
+            color: black;
+            border: none;
+            background: none;
+            text-align: center;
+
+            @media (max-width: 767px) {
+                font-size: 24px;
+                padding: 8px 16px;
+            }
+
+            &::placeholder {
+                font-size: 70px;
+                color: black;
+
+                @media (max-width: 767px) {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 112px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(25, 24, 22, 0.9);
+            font-size: 48px;
+            line-height: 1.2;
+            color: #b0a692;
+            border-radius: 0 0 12px 12px;
+
+            @media (max-width: 767px) {
+                height: 48px;
+                font-size: 20px;
+            }
+        }
+    }
+}

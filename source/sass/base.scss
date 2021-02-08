@@ -134,6 +134,8 @@ body {
         display: flex;
         flex-direction: column;
         height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     &__main {
@@ -228,6 +230,8 @@ body {
         font-size: 42px;
         line-height: 48px;
         text-align: center;
+        font-family: 'menu', Georgia, 'Times New Roman', Times, serif;
+        font-weight: 400;
 
         @media (orientation: landscape), (max-width: 767px) {
           font-size: 28px;
@@ -258,6 +262,8 @@ body {
         font-size: 36px;
         line-height: 42px;
         text-align: center;
+        font-family: 'menu', Georgia, 'Times New Roman', Times, serif;
+        font-weight: 400;
 
         @media (orientation: landscape), (max-width: 767px) {
           font-size: 24px;
