@@ -3,5 +3,10 @@ $main-text-size-sm: 20px;
 
 $text-gap-lg: 24px;
 $text-gap-sm: 16px;
+$default-text-foonts: Georgia, 'Times New Roman', Times, serif;
+$menu: 'menu', $default-text-foonts;
+$main: 'main', $default-text-foonts;
+$english-rose: 'english-rose', $default-text-foonts;
 
-$menu: 'menu', Georgia, 'Times New Roman', Times, serif;
+
+$main-black-color: #3b3b3b;

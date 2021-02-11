@@ -59,7 +59,7 @@ gulp.task("html", function() {
 });
 
 gulp.task("js", function () {
-    return gulp.src("source/js/script.js")
+    return gulp.src("source/js/page-flip.browser.js")
         .pipe(rename("script.js"))
         .pipe(gulp.dest("dist/js"));
 });

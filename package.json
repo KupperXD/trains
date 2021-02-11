@@ -34,6 +34,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgstore": "^7.0.1",
+    "page-flip": "^2.0.0",
     "plumber": "^0.4.8",
     "postcss": "^8.2.4",
     "posthtml-include": "^1.6.0"

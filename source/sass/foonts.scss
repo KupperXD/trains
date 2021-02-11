@@ -5,3 +5,19 @@
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-display: swap;
+    font-family: 'main';
+    src: url('../fonts/main.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'english-rose';
+    src: url('../fonts/english-rose.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
