@@ -3,7 +3,7 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        min-height: 100%;
     }
 
     .title {
@@ -95,6 +95,7 @@
             background: rgba(25, 24, 22, 0.9);
             font-size: 48px;
             line-height: 1.2;
+            font-family: $menu;
             color: #b0a692;
             border-radius: 0 0 12px 12px;
 

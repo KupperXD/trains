@@ -5,6 +5,8 @@
         font-size: 40px;
         line-height: 52px;
         text-align: center;
+        font-family: $english-rose;
+        font-weight: 400;
 
         @media (max-width: 767px) {
             font-size: 24px;
@@ -14,15 +16,18 @@
 
     &__text {
         margin: 8px 0 0;
-        font-size: 28px;
-        line-height: 40px;
+        font-size: $main-text-size-lg;
+        line-height: 1.2;
         text-indent: 40px;
 
         @media (max-width: 767px) {
             margin: 0;
-            font-size: 16px;
-            line-height: 24px;
+            font-size: $main-text-size-sm;
             text-indent: 16px;
+        }
+
+        .text-block__first-word {
+            font-family: $english-rose;
         }
 
         &:not(:first-of-type) {

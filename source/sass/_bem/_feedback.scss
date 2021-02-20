@@ -18,6 +18,7 @@
         display: block;
         font-size: 28px;
         line-height: 32px;
+        font-family: $menu;
         text-align: center;
 
         @media (max-width: 767px) {
@@ -70,6 +71,7 @@
         
         &__title {
             margin: 0 48px 0 0;
+            font-family: $menu;
             font-size: 28px;
             line-height: 32px;
             text-transform: uppercase;
@@ -138,6 +140,7 @@
             height: 100%;
             padding: 4px 48px;
             background: rgba(49, 46, 41, 0.9);
+            font-family: $menu;
             font-size: 48px;
             line-height: 52px;
             color: #edeae4;

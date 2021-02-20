@@ -13,14 +13,22 @@
     }
 
     &__wrapper {
+
         flex-grow: 1;
         height: 100%;
+        padding: 0 16px;
         overflow: hidden;
         overflow-y: auto;
         -webkit-mask-image: linear-gradient(
             180deg
             , black 0%, black 80%, transparent 100%);
                 -webkit-mask-repeat: no-repeat;
+
+        &.ps {
+            .ps__rail-y {
+                right: 0;
+            }
+        }
     }
 
     &__inner {

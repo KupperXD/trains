@@ -9,10 +9,18 @@
     }
 
     &__wrapper {
+        position: relative;
+        padding: 0 16px 16px 0;
         margin: 24px 0 0;
         height: 100%;
         flex-grow: 1;
         overflow: auto;
+
+        &.ps {
+            .ps__rail-y {
+                right: 0;
+            }
+        }
     }
 
     &__content {

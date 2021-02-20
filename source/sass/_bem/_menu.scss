@@ -20,6 +20,10 @@
         }
     }
 
+    &__wrapper {
+        margin: 24px 0 0;
+    }
+
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -85,6 +89,7 @@
         margin: 4px 0 0;
         text-align: center;
         font-size: 48px;
+        font-family: $english-rose;
         line-height: 1;
 
         @media (orientation: landscape), (max-width: 767px) {

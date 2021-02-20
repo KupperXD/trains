@@ -52,6 +52,13 @@
         text-align: center;
     }
 
+    .title-text {
+        font-family: $english-rose;
+        font-weight: 400;
+        font-size: $main-text-size-lg;
+        line-height: 1.2;
+    }
+
     &__inner {
         width: 66%;
         margin: 0 auto;

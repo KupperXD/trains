@@ -13,6 +13,7 @@
     }
 
     &__price {
+        margin: 24px 0 0;
         padding: 0 48px;
         list-style: none;
         counter-reset: list;
@@ -23,8 +24,12 @@
 
         &-item {
             text-align: center;
-            font-size: 16px;
-            line-height: 24px;
+            font-size: $main-text-size-lg;
+            line-height: 1.2;
+
+            @media (max-width: 767px) {
+                font-size: $main-text-size-sm;
+            }
 
             &::before {
                 counter-increment: list;

@@ -19,7 +19,7 @@
 
         &--picture {
             max-width: 60vh;
-            margin: 0 auto ;
+            margin: 0 auto;
             padding: 12px;
             border: 2px solid #94887a;
             background-color: rgba(244, 234, 219, 0.3);
@@ -61,6 +61,8 @@
             font-size: 32px;
             line-height: 36px;
             text-align: center;
+            font-weight: 400;
+            font-family: $menu;
 
             @media (max-width: 920px) {
                 font-size: 24px;

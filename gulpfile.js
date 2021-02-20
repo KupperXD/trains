@@ -17,6 +17,40 @@ var include = require("posthtml-include");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
 
+var pluginsJSpath = [
+    'node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js'
+];
+
+var pluginsCSSpath = [
+    'node_modules/perfect-scrollbar/css/perfect-scrollbar.css'
+];
+
+gulp.task("flipJS", function () {
+    return gulp.src('source/js/page-flip.browser.js')
+        .pipe(plumber())
+        .pipe(rename("flip.js"))
+        .pipe(gulp.dest("dist/js"));
+});
+
+gulp.task("pluginsJS", function () {
+    return gulp.src(pluginsJSpath)
+        .pipe(plumber())
+        .pipe(rename("plugins.js"))
+        .pipe(gulp.dest("dist/js"));
+});
+
+gulp.task("pluginsCSS", function () {
+    return gulp.src(pluginsCSSpath)
+        .pipe(plumber())
+        .pipe(sourcemap.init())
+        .pipe(postcss([
+            autoprefixer()
+        ]))
+        .pipe(rename("plugins.css"))
+        .pipe(sourcemap.write("."))
+        .pipe(gulp.dest("dist/css"))
+});
+
 gulp.task("css", function () {
     return gulp.src("source/sass/style.scss")
         .pipe(plumber())
@@ -59,7 +93,7 @@ gulp.task("html", function() {
 });
 
 gulp.task("js", function () {
-    return gulp.src("source/js/page-flip.browser.js")
+    return gulp.src("source/js/main/*.js")
         .pipe(rename("script.js"))
         .pipe(gulp.dest("dist/js"));
 });
@@ -79,12 +113,16 @@ gulp.task("server", function () {
     });
 
     gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+    gulp.watch("source/js/**/*.js", gulp.series('js'));
     gulp.watch("source/img/**/*.{jpg,png}", gulp.series("images"));
     gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
 });
 
 gulp.task("build", gulp.series(
     "clean",
+    'flipJS',
+    "pluginsCSS",
+    "pluginsJS",
     "css",
     "svgCopy",
     "js",

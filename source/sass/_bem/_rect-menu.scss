@@ -31,8 +31,10 @@
         &-title {
             margin: 16px 0 0;
             font-size: 38px;
+            font-family: $menu;
             line-height: 1;
             text-align: center;
+            font-weight: 400;
 
             @media (max-width: 920px) {
                 font-size: 16px;

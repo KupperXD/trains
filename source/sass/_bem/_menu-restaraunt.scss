@@ -1,4 +1,5 @@
 .menu-restaraunt-container {
+    padding: 0 12px;
     height: 100%;
     -webkit-mask-image: linear-gradient(
         180deg
@@ -6,6 +7,12 @@
         mask-repeat: no-repeat;
         overflow: hidden;
         overflow-y: auto;
+
+        &.ps {
+            .ps__rail-y {
+                right: 0;
+            }   
+        }
 }
 
 .menu-restaraunt {
@@ -27,7 +34,9 @@
         max-width: 420px;
 
         &-title {
+            font-family: $menu;
             font-size: 32px;
+            font-weight: 400;
             line-height: 1;
             text-align: center;
 
@@ -42,15 +51,11 @@
     }
 
     &__picture {
-        padding: 12px;
+        padding: 8px;
         border: 2px solid #94887a;
         background-color: rgba(244, 234, 219, 0.3);
         overflow: hidden;
         border-radius: 16px;
-
-        @media (max-width: 767px) {
-            padding: 8px;
-        }
 
         &-inner {
             position: relative;

@@ -19,13 +19,12 @@
         width: calc((100% - 104px) / 2);
         position: relative;
         margin: 20px 26px;
-        padding: 12px;
+        padding: 4px;
         background-color: rgba(244, 234, 219, 0.6);
         border-radius: 16px;
 
         @media (max-width: 767px) {
             margin: 12px;
-            padding: 8px;
         }
     }
 
